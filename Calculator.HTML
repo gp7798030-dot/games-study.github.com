@@ -1,0 +1,25 @@
+<h2 style="text-align:center;">Advanced Calculator</h2>
+<div style="text-align:center; font-size:18px; max-width:500px; margin:auto;">
+  <input id="a" type="number" placeholder="First Number" style="width:100%; font-size:20px; padding:10px; margin:5px 0;">
+  <input id="b" type="number" placeholder="Second Number" style="width:100%; font-size:20px; padding:10px; margin:5px 0;">
+  <br>
+  <button onclick="add()" style="width:45%; font-size:20px; padding:10px; margin:5px;">Add +</button>
+  <button onclick="sub()" style="width:45%; font-size:20px; padding:10px; margin:5px;">Subtract -</button>
+  <br>
+  <button onclick="mul()" style="width:45%; font-size:20px; padding:10px; margin:5px;">Multiply ×</button>
+  <button onclick="div()" style="width:45%; font-size:20px; padding:10px; margin:5px;">Divide ÷</button>
+  <br>
+  <button onclick="clearResult()" style="width:95%; font-size:20px; padding:10px; margin:5px; background-color:red; color:white;">Clear</button>
+  <p id="r" style="font-size:22px; font-weight:bold; margin-top:10px;"></p>
+</div>
+
+<script>
+function add(){r.innerHTML = Number(a.value) + Number(b.value);}
+function sub(){r.innerHTML = Number(a.value) - Number(b.value);}
+function mul(){r.innerHTML = Number(a.value) * Number(b.value);}
+function div(){ 
+  if(b.value == 0){r.innerHTML="Error: Divide by 0"} 
+  else {r.innerHTML = Number(a.value) / Number(b.value);}
+}
+function clearResult(){ a.value=""; b.value=""; r.innerHTML=""; }
+</script>
